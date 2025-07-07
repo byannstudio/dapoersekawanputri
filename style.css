@@ -265,11 +265,39 @@ footer {
   }
 
   .product-grid {
-    grid-template-columns: 1fr; /* Stack products on smaller screens */
+    /* UBAH BAGIAN INI */
+    grid-template-columns: repeat(2, 1fr); /* Menampilkan 2 produk per baris di layar kecil */
+    gap: 15px; /* Sesuaikan jarak antar produk jika perlu */
   }
 
   .social-buttons {
     flex-direction: column;
     gap: 10px;
+  }
+
+  /* Optional: further adjust product card size on very small screens */
+  @media (max-width: 480px) {
+    .product-grid {
+      gap: 10px; /* Kurangi gap untuk layar lebih kecil */
+    }
+    .product-card {
+      padding: 15px; /* Kurangi padding kartu produk */
+    }
+    .product-card img {
+      height: 150px; /* Kurangi tinggi gambar agar lebih ringkas */
+    }
+    .product-card h3 {
+      font-size: 1.5em; /* Kurangi ukuran font judul produk */
+    }
+    .product-card p {
+      font-size: 0.85em; /* Kurangi ukuran font deskripsi produk */
+    }
+    .product-card .price {
+      font-size: 1.1em; /* Kurangi ukuran font harga */
+    }
+    .product-card button {
+      padding: 10px 20px; /* Kurangi padding tombol */
+      font-size: 0.9em; /* Kurangi ukuran font tombol */
+    }
   }
 }
