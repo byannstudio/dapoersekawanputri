@@ -12,8 +12,8 @@ body {
 header {
   background-color: #e67e22; /* Warna orange muda dasar */
   background-image: url('images/backgroundheader.jpg'); /* Pastikan ini sudah benar */
-  background-repeat: repeat; /* Atur ini: 'repeat' jika motif kecil, 'no-repeat' jika gambar besar */
-  background-size: auto; /* Atur ini: 'auto', 'cover', 'contain', atau ukuran spesifik */
+  background-repeat: no-repeat; /* Atur ini: 'repeat' jika motif kecil, 'no-repeat' jika gambar besar */
+  background-size: cover; /* Atur ini: 'auto', 'cover', 'contain', atau ukuran spesifik */
   /* background-blend-mode: multiply; <--- HAPUS BARIS INI */
   color: #fff;
   padding: 40px 20px;
