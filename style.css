@@ -20,12 +20,12 @@ header {
 header h1 {
   font-family: 'Playfair Display', serif; /* Elegant heading font */
   margin: 0;
-  font-size: 2.2em;
+  font-size: 2.2em; /* Default font size for desktop, will be adjusted in media queries */
   letter-spacing: 2px;
 }
 
 header p {
-  font-size: 0.7em;
+  font-size: 0.7em; /* Default font size for desktop, will be adjusted in media queries */
   opacity: 0.9;
 }
 
@@ -66,7 +66,7 @@ section {
 
 section h2 {
   font-family: 'Playfair Display', serif;
-  font-size: 2.5em;
+  font-size: 2.5em; /* Default font size for desktop */
   color: #e67e22;
   margin-bottom: 30px;
   position: relative;
@@ -87,7 +87,7 @@ section h2::after {
 
 /* Tentang Kami Section */
 .tentang p {
-  font-size: 0.7em;
+  font-size: 0.7em; /* Default font size for desktop */
   max-width: 800px;
   margin: 0 auto;
 }
@@ -108,7 +108,7 @@ section h2::after {
 .product-card {
   background-color: #fff;
   border-radius: 10px;
-  padding: 25px;
+  padding: 25px; /* Default padding for desktop */
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -136,19 +136,19 @@ section h2::after {
 .product-card h3 {
   font-family: 'Playfair Display', serif;
   color: #e67e22;
-  font-size: 1.8em;
+  font-size: 1.8em; /* Default font size for desktop */
   margin-top: 10px;
   margin-bottom: 5px;
 }
 
 .product-card p {
-  font-size: 0.95em;
+  font-size: 0.95em; /* Default font size for desktop */
   color: #555;
   margin-bottom: 15px;
 }
 
 .product-card .price {
-  font-size: 1.3em;
+  font-size: 1.3em; /* Default font size for desktop */
   font-weight: 600;
   color: #d35400;
   margin-bottom: 20px;
@@ -158,10 +158,10 @@ section h2::after {
   background-color: #e67e22;
   color: #fff;
   border: none;
-  padding: 12px 25px;
+  padding: 12px 25px; /* Default padding for desktop */
   border-radius: 25px;
   cursor: pointer;
-  font-size: 1em;
+  font-size: 1em; /* Default font size for desktop */
   font-weight: 600;
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
@@ -177,7 +177,7 @@ section h2::after {
 }
 
 .kontak p {
-  font-size: 1.1em;
+  font-size: 1.1em; /* Default font size for desktop */
   margin-bottom: 30px;
 }
 
@@ -245,29 +245,84 @@ footer {
 }
 
 /* Responsive Design */
+/* Media Query for screens up to 768px (most tablets in portrait and larger phones) */
 @media (max-width: 768px) {
+  header {
+    padding: 30px 15px; /* Kurangi padding header */
+  }
+
   header h1 {
-    font-size: 1.8em;
+    font-size: 1.9em; /* Sesuaikan ukuran font header h1 */
+  }
+
+  header p {
+    font-size: 0.8em; /* Sesuaikan ukuran font header p */
   }
 
   nav a {
-    padding: 8px 15px;
-    margin: 0 5px;
-    font-size: 0.9em;
+    padding: 8px 12px; /* Kurangi padding navigasi */
+    margin: 0 4px; /* Kurangi margin navigasi */
+    font-size: 0.85em; /* Sedikit perkecil font navigasi */
   }
 
   section {
-    padding: 40px 15px;
+    padding: 30px 15px; /* Kurangi padding section */
+    margin-top: 15px; /* Kurangi margin top section */
   }
 
   section h2 {
-    font-size: 2em;
+    font-size: 1.8em; /* Sesuaikan ukuran font judul section */
+    margin-bottom: 20px; /* Kurangi margin bottom judul section */
+  }
+
+  section h2::after {
+    width: 60px; /* Perkecil garis bawah judul section */
+    height: 3px;
+  }
+
+  .tentang p {
+    font-size: 0.9em; /* Sesuaikan ukuran font paragraf tentang kami */
   }
 
   .product-grid {
-    /* UBAH BAGIAN INI */
-    grid-template-columns: repeat(2, 1fr); /* Menampilkan 2 produk per baris di layar kecil */
-    gap: 15px; /* Sesuaikan jarak antar produk jika perlu */
+    grid-template-columns: repeat(2, 1fr); /* Tetap 2 kolom */
+    gap: 15px; /* Jarak antar produk */
+    margin-top: 25px; /* Kurangi margin top product grid */
+  }
+
+  .product-card {
+    padding: 15px; /* Kurangi padding kartu produk */
+  }
+
+  .product-card img {
+    height: 120px; /* Kurangi tinggi gambar agar lebih ringkas */
+    margin-bottom: 10px;
+  }
+
+  .product-card h3 {
+    font-size: 1.1em; /* Lebih perkecil judul produk */
+    margin-top: 5px;
+    margin-bottom: 3px;
+  }
+
+  .product-card p {
+    font-size: 0.75em; /* Lebih perkecil deskripsi produk */
+    margin-bottom: 10px;
+  }
+
+  .product-card .price {
+    font-size: 0.95em; /* Lebih perkecil harga */
+    margin-bottom: 15px;
+  }
+
+  .product-card button {
+    padding: 8px 18px; /* Lebih perkecil tombol */
+    font-size: 0.8em; /* Lebih perkecil font tombol */
+  }
+
+  .kontak p {
+    font-size: 0.9em; /* Sesuaikan ukuran font paragraf kontak */
+    margin-bottom: 20px;
   }
 
   .social-buttons {
@@ -275,29 +330,81 @@ footer {
     gap: 10px;
   }
 
-  /* Optional: further adjust product card size on very small screens */
-  @media (max-width: 480px) {
-    .product-grid {
-      gap: 10px; /* Kurangi gap untuk layar lebih kecil */
-    }
-    .product-card {
-      padding: 15px; /* Kurangi padding kartu produk */
-    }
-    .product-card img {
-      height: 150px; /* Kurangi tinggi gambar agar lebih ringkas */
-    }
-    .product-card h3 {
-      font-size: 1.5em; /* Kurangi ukuran font judul produk */
-    }
-    .product-card p {
-      font-size: 0.85em; /* Kurangi ukuran font deskripsi produk */
-    }
-    .product-card .price {
-      font-size: 1.1em; /* Kurangi ukuran font harga */
-    }
-    .product-card button {
-      padding: 10px 20px; /* Kurangi padding tombol */
-      font-size: 0.9em; /* Kurangi ukuran font tombol */
-    }
+  .social-buttons a {
+    padding: 10px 20px;
+    font-size: 0.9em;
+  }
+
+  footer {
+    padding: 20px 15px;
+    font-size: 0.8em;
+  }
+}
+
+/* Media Query for screens up to 480px (most smartphones in portrait) */
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1.6em; /* Lebih kecil lagi untuk h1 */
+  }
+
+  header p {
+    font-size: 0.7em; /* Lebih kecil lagi untuk p */
+  }
+
+  nav a {
+    padding: 6px 8px; /* Lebih kecil lagi padding nav */
+    margin: 0 2px; /* Lebih kecil lagi margin nav */
+    font-size: 0.75em; /* Lebih kecil lagi font nav */
+  }
+
+  section h2 {
+    font-size: 1.6em; /* Lebih kecil lagi untuk judul section */
+  }
+
+  .tentang p {
+    font-size: 0.8em; /* Lebih kecil lagi untuk paragraf tentang kami */
+  }
+
+  .product-grid {
+    gap: 10px; /* Kurangi gap untuk layar lebih kecil */
+  }
+
+  .product-card {
+    padding: 10px; /* Kurangi padding kartu produk lebih lanjut */
+  }
+
+  .product-card img {
+    height: 100px; /* Kurangi tinggi gambar agar lebih ringkas */
+    margin-bottom: 8px;
+  }
+
+  .product-card h3 {
+    font-size: 1em; /* Sangat perkecil judul produk */
+    margin-top: 3px;
+    margin-bottom: 2px;
+  }
+
+  .product-card p {
+    font-size: 0.7em; /* Sangat perkecil deskripsi produk */
+    margin-bottom: 8px;
+  }
+
+  .product-card .price {
+    font-size: 0.85em; /* Sangat perkecil harga */
+    margin-bottom: 10px;
+  }
+
+  .product-card button {
+    padding: 6px 12px; /* Sangat perkecil tombol */
+    font-size: 0.75em; /* Sangat perkecil font tombol */
+  }
+
+  .kontak p {
+    font-size: 0.8em;
+  }
+
+  .social-buttons a {
+    padding: 8px 15px;
+    font-size: 0.8em;
   }
 }
