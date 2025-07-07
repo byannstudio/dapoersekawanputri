@@ -253,6 +253,11 @@ footer {
 @media (max-width: 768px) {
   header {
     padding: 30px 15px; /* Kurangi padding header */
+    /* Tambahkan atau ubah properti background untuk mobile di sini */
+    background-image: url('images/backgroundheader.jpg'); /* Pastikan path dan nama file benar */
+    background-repeat: repeat; /* Sesuaikan (misal: 'no-repeat' jika gambarnya besar) */
+    background-size: cover; /* Coba 'cover' agar gambar menutupi seluruh area header di mobile */
+    background-blend-mode: multiply; /* Sesuaikan atau hapus jika tidak diperlukan */
   }
 
   header h1 {
