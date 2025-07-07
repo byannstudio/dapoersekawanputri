@@ -10,11 +10,16 @@ body {
 
 /* Header Styles */
 header {
-  background-color: #e67e22; /* Warm orange */
+  background-color: #e67e22; /* Warna orange muda dasar */
+  background-image: url('images/backgroundheader.jpg'); /* Ganti 'motif_header.png' dengan nama file gambarmu */
+  background-repeat: repeat; /* Atur apakah gambar diulang atau tidak. 'repeat' jika motif kecil, 'no-repeat' jika gambar besar dan hanya satu */
+  background-size: auto; /* Atur ukuran gambar. 'auto' atau 'cover' atau ukuran spesifik seperti '200px' */
+  background-blend-mode: multiply; /* Ini penting untuk efek transparan di atas warna solid. Coba juga 'overlay', 'soft-light', atau 'luminosity' */
   color: #fff;
   padding: 40px 20px;
   text-align: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* Pastikan properti lain tetap ada */
 }
 
 header h1 {
