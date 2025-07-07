@@ -4,6 +4,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Dapoer Sekawan Putri - Keripik Pisang, Rendang, dan Ayam Tim rumahan berkualitas dari Sukoharjo.">
   <title>Dapoer Sekawan Putri</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -18,68 +21,71 @@
     <a href="#kontak">Kontak</a>
   </nav>
 
-  <section id="tentang" class="tentang">
+  <section id="tentang" class="tentang fade-in">
     <h2>Tentang Kami</h2>
     <p>Dapoer Sekawan Putri adalah usaha rumahan yang berdedikasi dalam menyajikan makanan lezat dan sehat khas Indonesia. Kami menjamin kualitas dan rasa pada setiap produk yang kami kirimkan kepada pelanggan.</p>
   </section>
 
-  <section id="produk" class="product-section">
+  <section id="produk" class="product-section fade-in">
     <h2>Produk Unggulan</h2>
 
-    <div class="product-card">
-      <img src="images/krippisvanilla.jpg" alt="Keripik Pisang Susu Vanilla" width="200" />
-      <h3>Keripik Pisang Susu Vanilla</h3>
-      <p>Gurih, manis, dan renyah!</p>
-      <p class="price">Rp15.000 / 100g</p>
-      <button onclick="pesan('Keripik Pisang Susu Vanilla')">Pesan Sekarang</button>
-    </div>
+    <div class="product-grid">
+      <div class="product-card">
+        <img src="images/krippisvanilla.jpg" alt="Keripik Pisang Susu Vanilla" />
+        <h3>Keripik Pisang Susu Vanilla</h3>
+        <p>Gurih, manis, dan renyah!</p>
+        <p class="price">Rp15.000 / 100g</p>
+        <button onclick="pesan('Keripik Pisang Susu Vanilla')">Pesan Sekarang</button>
+      </div>
 
-    <div class="product-card">
-      <img src="rendang.jpg" alt="Rendang Daging Sapi">
-      <h3>Rendang Daging Sapi</h3>
-      <p>100g - Rp25rb | 250g - Rp60rb | 500g - Rp115rb</p>
-      <button onclick="pesan('Rendang Daging Sapi')">Pesan Sekarang</button>
-    </div>
+      <div class="product-card">
+        <img src="rendang.jpg" alt="Rendang Daging Sapi">
+        <h3>Rendang Daging Sapi</h3>
+        <p>100g - Rp25rb | 250g - Rp60rb | 500g - Rp115rb</p>
+        <button onclick="pesan('Rendang Daging Sapi')">Pesan Sekarang</button>
+      </div>
 
-    <div class="product-card">
-      <img src="ayamtim.jpg" alt="Ayam Tim">
-      <h3>Ayam Tim</h3>
-      <p>Ayam tim sehat dan lezat siap santap!</p>
-      <p class="price">Rp30.000 / porsi</p>
-      <button onclick="pesan('Ayam Tim')">Pesan Sekarang</button>
+      <div class="product-card">
+        <img src="ayamtim.jpg" alt="Ayam Tim">
+        <h3>Ayam Tim</h3>
+        <p>Ayam tim sehat dan lezat siap santap!</p>
+        <p class="price">Rp30.000 / porsi</p>
+        <button onclick="pesan('Ayam Tim')">Pesan Sekarang</button>
+      </div>
     </div>
   </section>
   
-  <section id="semua-produk" class="product-section">
-  <h2>Semua Produk</h2>
+  <section id="semua-produk" class="product-section fade-in">
+    <h2>Semua Produk</h2>
 
-  <div class="product-card">
-    <img src="keripik-pedas.jpg" alt="Keripik Pisang Pedas">
-    <h3>Keripik Pisang Pedas</h3>
-    <p>Pedas nikmat bikin nagih!</p>
-    <p class="price">Rp16.000 / 100g</p>
-    <button onclick="pesan('Keripik Pisang Pedas')">Pesan Sekarang</button>
-  </div>
+    <div class="product-grid">
+      <div class="product-card">
+        <img src="keripik-pedas.jpg" alt="Keripik Pisang Pedas">
+        <h3>Keripik Pisang Pedas</h3>
+        <p>Pedas nikmat bikin nagih!</p>
+        <p class="price">Rp16.000 / 100g</p>
+        <button onclick="pesan('Keripik Pisang Pedas')">Pesan Sekarang</button>
+      </div>
 
-  <div class="product-card">
-    <img src="keripik-keju.jpg" alt="Keripik Pisang Keju">
-    <h3>Keripik Pisang Keju</h3>
-    <p>Rasa keju gurih dan renyah.</p>
-    <p class="price">Rp17.000 / 100g</p>
-    <button onclick="pesan('Keripik Pisang Keju')">Pesan Sekarang</button>
-  </div>
+      <div class="product-card">
+        <img src="keripik-keju.jpg" alt="Keripik Pisang Keju">
+        <h3>Keripik Pisang Keju</h3>
+        <p>Rasa keju gurih dan renyah.</p>
+        <p class="price">Rp17.000 / 100g</p>
+        <button onclick="pesan('Keripik Pisang Keju')">Pesan Sekarang</button>
+      </div>
 
-  <div class="product-card">
-    <img src="abon-sapi.jpg" alt="Abon Sapi">
-    <h3>Abon Sapi</h3>
-    <p>Abon sapi gurih siap saji!</p>
-    <p class="price">Rp25.000 / 100g</p>
-    <button onclick="pesan('Abon Sapi')">Pesan Sekarang</button>
-  </div>
-</section>
+      <div class="product-card">
+        <img src="abon-sapi.jpg" alt="Abon Sapi">
+        <h3>Abon Sapi</h3>
+        <p>Abon sapi gurih siap saji!</p>
+        <p class="price">Rp25.000 / 100g</p>
+        <button onclick="pesan('Abon Sapi')">Pesan Sekarang</button>
+      </div>
+    </div>
+  </section>
 
-
-  <section id="kontak" class="kontak">
+  <section id="kontak" class="kontak fade-in">
     <h2>Kontak Kami</h2>
     <p>Lokasi: Sukoharjo, Jawa Tengah</p>
     <div class="social-buttons">
@@ -94,5 +100,10 @@
   </footer>
 
   <script src="script.js"></script>
+  <script>
+    function pesan(productName) {
+      alert('Anda memesan ' + productName + '. Silakan hubungi kami untuk informasi lebih lanjut.');
+    }
+  </script>
 </body>
 </html>
