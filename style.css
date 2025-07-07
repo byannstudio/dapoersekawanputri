@@ -20,12 +20,12 @@ header {
 header h1 {
   font-family: 'Playfair Display', serif; /* Elegant heading font */
   margin: 0;
-  font-size: 2.2em; /* Default font size for desktop, will be adjusted in media queries */
+  font-size: 3.2em; /* Diperbesar dari 2.2em */
   letter-spacing: 2px;
 }
 
 header p {
-  font-size: 0.7em; /* Default font size for desktop, will be adjusted in media queries */
+  font-size: 1.1em; /* Diperbesar dari 0.7em */
   opacity: 0.9;
 }
 
@@ -40,7 +40,7 @@ nav {
 nav a {
   color: #fff;
   text-decoration: none;
-  padding: 10px 20px;
+  padding: 12px 25px; /* Diperbesar dari 10px 20px */
   margin: 0 10px;
   font-weight: 600;
   transition: background-color 0.3s ease, transform 0.3s ease;
@@ -66,7 +66,7 @@ section {
 
 section h2 {
   font-family: 'Playfair Display', serif;
-  font-size: 2.5em; /* Default font size for desktop */
+  font-size: 2.8em; /* Diperbesar dari 2.5em */
   color: #e67e22;
   margin-bottom: 30px;
   position: relative;
@@ -87,7 +87,7 @@ section h2::after {
 
 /* Tentang Kami Section */
 .tentang p {
-  font-size: 0.7em; /* Default font size for desktop */
+  font-size: 1.1em; /* Diperbesar dari 0.7em */
   max-width: 800px;
   margin: 0 auto;
 }
@@ -108,7 +108,7 @@ section h2::after {
 .product-card {
   background-color: #fff;
   border-radius: 10px;
-  padding: 25px; /* Default padding for desktop */
+  padding: 25px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -136,19 +136,19 @@ section h2::after {
 .product-card h3 {
   font-family: 'Playfair Display', serif;
   color: #e67e22;
-  font-size: 1.8em; /* Default font size for desktop */
+  font-size: 1.8em; /* Tetap 1.8em */
   margin-top: 10px;
   margin-bottom: 5px;
 }
 
 .product-card p {
-  font-size: 0.95em; /* Default font size for desktop */
+  font-size: 1em; /* Diperbesar dari 0.95em */
   color: #555;
   margin-bottom: 15px;
 }
 
 .product-card .price {
-  font-size: 1.3em; /* Default font size for desktop */
+  font-size: 1.4em; /* Diperbesar dari 1.3em */
   font-weight: 600;
   color: #d35400;
   margin-bottom: 20px;
@@ -158,10 +158,10 @@ section h2::after {
   background-color: #e67e22;
   color: #fff;
   border: none;
-  padding: 12px 25px; /* Default padding for desktop */
+  padding: 14px 28px; /* Diperbesar dari 12px 25px */
   border-radius: 25px;
   cursor: pointer;
-  font-size: 1em; /* Default font size for desktop */
+  font-size: 1.1em; /* Diperbesar dari 1em */
   font-weight: 600;
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
@@ -177,7 +177,7 @@ section h2::after {
 }
 
 .kontak p {
-  font-size: 1.1em; /* Default font size for desktop */
+  font-size: 1.1em; /* Tetap 1.1em */
   margin-bottom: 30px;
 }
 
@@ -244,7 +244,7 @@ footer {
   100% { transform: scale(1); }
 }
 
-/* Responsive Design */
+/* Responsive Design - THIS PART IS KEPT AS IS, NO CHANGES MADE HERE */
 /* Media Query for screens up to 768px (most tablets in portrait and larger phones) */
 @media (max-width: 768px) {
   header {
