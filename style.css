@@ -11,15 +11,14 @@ body {
 /* Header Styles */
 header {
   background-color: #e67e22; /* Warna orange muda dasar */
-  background-image: url('images/backgroundheader.jpg'); /* INI YANG DIUBAH: Gunakan nama file yang ada di GitHub */
-  background-repeat: repeat; /* Sesuaikan ini sesuai keinginanmu */
-  background-size: auto; /* Sesuaikan ini sesuai keinginanmu (auto, cover, contain, atau ukuran spesifik) */
-  background-blend-mode: multiply; /* Coba juga 'overlay', 'soft-light' */
+  background-image: url('images/backgroundheader.jpg'); /* Pastikan ini sudah benar */
+  background-repeat: repeat; /* Atur ini: 'repeat' jika motif kecil, 'no-repeat' jika gambar besar */
+  background-size: auto; /* Atur ini: 'auto', 'cover', 'contain', atau ukuran spesifik */
+  /* background-blend-mode: multiply; <--- HAPUS BARIS INI */
   color: #fff;
   padding: 40px 20px;
   text-align: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  /* Properti lainnya tetap sama */
 }
 
 header h1 {
