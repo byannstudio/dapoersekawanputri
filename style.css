@@ -20,12 +20,12 @@ header {
 header h1 {
   font-family: 'Playfair Display', serif; /* Elegant heading font */
   margin: 0;
-  font-size: 3em;
+  font-size: 2.2em;
   letter-spacing: 2px;
 }
 
 header p {
-  font-size: 1.2em;
+  font-size: 0.7em;
   opacity: 0.9;
 }
 
@@ -87,7 +87,7 @@ section h2::after {
 
 /* Tentang Kami Section */
 .tentang p {
-  font-size: 1.1em;
+  font-size: 0.7em;
   max-width: 800px;
   margin: 0 auto;
 }
@@ -247,7 +247,7 @@ footer {
 /* Responsive Design */
 @media (max-width: 768px) {
   header h1 {
-    font-size: 2.5em;
+    font-size: 1.8em;
   }
 
   nav a {
