@@ -93,6 +93,25 @@ section h2::after {
   font-size: 1.1em; /* Diperbesar dari 0.7em */
   max-width: 800px;
   margin: 0 auto;
+  text-align: center; /* Default for existing paragraphs */
+}
+
+/* New class for justified text */
+.justified-text {
+  text-align: justify;
+  margin-bottom: 10px; /* Add some space between paragraphs */
+}
+
+.justified-list {
+  text-align: justify;
+  list-style-position: inside; /* Ensures bullets are inside the justified block */
+  padding-left: 0; /* Remove default padding for lists */
+  max-width: 800px;
+  margin: 0 auto 20px; /* Center the list and add bottom margin */
+}
+
+.justified-list li {
+  margin-bottom: 5px; /* Space between list items */
 }
 
 /* Product Section */
@@ -349,6 +368,16 @@ footer {
     font-size: 0.9em;
   }
 
+  .justified-text {
+    text-align: justify;
+  }
+
+  .justified-list {
+    text-align: justify;
+    list-style-position: inside;
+    padding-left: 0;
+  }
+
   .product-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 15px;
@@ -434,6 +463,16 @@ footer {
 
   .tentang p {
     font-size: 0.8em;
+  }
+
+  .justified-text {
+    text-align: justify;
+  }
+
+  .justified-list {
+    text-align: justify;
+    list-style-position: inside;
+    padding-left: 0;
   }
 
   .product-grid {
