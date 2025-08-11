@@ -117,32 +117,46 @@ section h2::after {
 
 /* Tentang Kami Section */
 .tentang p {
-    font-size: 1.1em;
-    max-width: 800px;
-    margin: 0 auto;
-    text-align: center; /* Paragraf utama tetap rata tengah */
+    font-size: 1.1em;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
 }
 
-/* Teks paragraf tertentu yang ingin diratakan kiri-kanan */
+/* New class for justified text */
 .justified-text {
-    text-align: justify;
-    margin-bottom: 10px;
+    text-align: justify;
+    margin-bottom: 10px;
 }
 
-/* Gaya baru untuk daftar (ul) di bagian tentang */
+/* Perbaikan total untuk daftar di bagian Tentang Kami */
 .tentang ul {
-    list-style-type: disc; /* Menggunakan bullet point default */
-    text-align: left; /* **Ini yang paling penting: membuat teks daftar rata kiri** */
-    margin: 20px auto;
-    padding-left: 20px; /* Memberikan indentasi agar bullet point terlihat */
-    max-width: 800px;
+    list-style: disc inside; /* Menyatukan list-style dan list-style-position */
+    text-align: left; /* Teks rata kiri */
+    margin: 20px auto;
+    padding-left: 0;
+    max-width: 800px;
 }
 
 .tentang ul li {
-    margin-bottom: 8px; /* Memberikan sedikit jarak antar item daftar */
-    line-height: 1.5; /* Memperbaiki jarak antar baris */
+    margin-bottom: 8px; /* Jarak antar item di daftar */
+    line-height: 1.5;
 }
 
+/* Hapus .justified-list karena sudah diganti dengan .tentang ul */
+.justified-list {
+    /* Style ini tidak lagi diperlukan, bisa dihapus */
+    text-align: justify;
+    list-style-position: inside;
+    padding-left: 0;
+    max-width: 800px;
+    margin: 0 auto 20px;
+}
+
+.justified-list li {
+    /* Style ini juga tidak lagi diperlukan */
+    margin-bottom: 5px;
+}
 /* Product Section */
 .product-section {
     background-color: #f9f9f9;
