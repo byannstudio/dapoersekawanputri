@@ -1,36 +1,71 @@
 document.addEventListener('DOMContentLoaded', () => {
-    console.log('DOM Content Loaded! Script.js has started.'); // Log 1
+    console.log('DOM Content Loaded! Script.js is running.');
 
-    // Function to create a WhatsApp message
-    function sendWhatsAppMessage(productName) {
-        const number = "6285878299285"; // Replace with your WhatsApp number
-        const message = `Halo, saya ingin memesan produk: ${productName}`;
+    // --- Language Management ---
+    
+    // Function to set the website language
+    window.setLanguage = function(lang) {
+        localStorage.setItem('lang', lang);
+
+        const elements = document.querySelectorAll('[data-en], [data-id]');
+        elements.forEach(el => {
+            const translation = el.getAttribute(`data-${lang}`);
+            if (translation) {
+                el.innerHTML = translation;
+            }
+        });
+    };
+
+    // Load saved language or default to English
+    const savedLang = localStorage.getItem('lang') || 'en';
+    window.setLanguage(savedLang);
+
+    // --- WhatsApp Messaging ---
+
+    // Function to create and send a WhatsApp message
+    function sendWhatsAppMessage(productName, lang) {
+        const number = "6285878299285";
+        let message;
+
+        if (lang === 'id') {
+            message = `Halo, saya ingin memesan produk: ${productName}`;
+        } else {
+            message = `Hello, I would like to order the product: ${productName}`;
+        }
+
         const url = `https://wa.me/${number}?text=${encodeURIComponent(message)}`;
         window.open(url, '_blank');
-        console.log(`Attempting to open WhatsApp with message: ${message}`); // Log 2
+        console.log(`Attempting to open WhatsApp with message: ${message}`);
     }
 
     // Get all buttons with the 'whatsapp-button' class
     const whatsappButtons = document.querySelectorAll('.whatsapp-button');
-    console.log('Number of WhatsApp buttons found:', whatsappButtons.length); // Log 3
+    console.log('Number of WhatsApp buttons found:', whatsappButtons.length);
 
-    // Add an event listener to each WhatsApp button
+    // Add event listener to each WhatsApp button
     whatsappButtons.forEach(button => {
-        console.log('Adding event listener to button:', button); // Log 4 (will appear multiple times based on the number of buttons)
         button.addEventListener('click', function(event) {
-            event.preventDefault(); // Prevent the default action of the link (navigation)
-            const productName = this.dataset.productName; // Get the product name from data-product-name
-            console.log('WhatsApp button clicked. Product name:', productName); // Log 5
+            event.preventDefault();
+            const productName = this.dataset.productName;
+            const currentLang = localStorage.getItem('lang') || 'en';
+            
+            console.log('WhatsApp button clicked. Product name:', productName);
 
             if (productName) {
-                sendWhatsAppMessage(productName);
+                sendWhatsAppMessage(productName, currentLang);
             } else {
-                sendWhatsAppMessage("informasi lebih lanjut");  
+                // Default message if no product name is provided
+                if (currentLang === 'id') {
+                    sendWhatsAppMessage("informasi lebih lanjut", currentLang);
+                } else {
+                    sendWhatsAppMessage("more information", currentLang);
+                }
             }
         });
     });
 
-    // JavaScript for the fade-in effect
+    // --- Fade-in Effect ---
+
     const faders = document.querySelectorAll('.fade-in');
     const appearOptions = {
         threshold: 0.1,
