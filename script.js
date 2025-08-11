@@ -1,36 +1,36 @@
 document.addEventListener('DOMContentLoaded', () => {
-    console.log('DOM Content Loaded! Script.js mulai berjalan.'); // Log 1
+    console.log('DOM Content Loaded! Script.js has started.'); // Log 1
 
-    // Fungsi untuk membuat pesan WhatsApp
-    function pesanWhatsApp(namaProduk) {
-        const nomor = "6285878299285"; // Ganti dengan nomor WhatsApp Anda
-        const pesan = `Halo, saya ingin memesan produk: ${namaProduk}`;
-        const url = `https://wa.me/${nomor}?text=${encodeURIComponent(pesan)}`;
+    // Function to create a WhatsApp message
+    function sendWhatsAppMessage(productName) {
+        const number = "6285878299285"; // Replace with your WhatsApp number
+        const message = `Halo, saya ingin memesan produk: ${productName}`;
+        const url = `https://wa.me/${number}?text=${encodeURIComponent(message)}`;
         window.open(url, '_blank');
-        console.log(`Mencoba membuka WhatsApp dengan pesan: ${pesan}`); // Log 2
+        console.log(`Attempting to open WhatsApp with message: ${message}`); // Log 2
     }
 
-    // Mendapatkan semua tombol dengan kelas 'whatsapp-button'
+    // Get all buttons with the 'whatsapp-button' class
     const whatsappButtons = document.querySelectorAll('.whatsapp-button');
-    console.log('Jumlah tombol WhatsApp yang ditemukan:', whatsappButtons.length); // Log 3
+    console.log('Number of WhatsApp buttons found:', whatsappButtons.length); // Log 3
 
-    // Menambahkan event listener ke setiap tombol WhatsApp
+    // Add an event listener to each WhatsApp button
     whatsappButtons.forEach(button => {
-        console.log('Menambahkan event listener ke tombol:', button); // Log 4 (akan muncul berkali-kali sesuai jumlah tombol)
+        console.log('Adding event listener to button:', button); // Log 4 (will appear multiple times based on the number of buttons)
         button.addEventListener('click', function(event) {
-            event.preventDefault(); // Mencegah tindakan default dari link (navigasi)
-            const productName = this.dataset.productName; // Mengambil nama produk dari data-product-name
-            console.log('Tombol WhatsApp diklik. Nama produk:', productName); // Log 5
+            event.preventDefault(); // Prevent the default action of the link (navigation)
+            const productName = this.dataset.productName; // Get the product name from data-product-name
+            console.log('WhatsApp button clicked. Product name:', productName); // Log 5
 
             if (productName) {
-                pesanWhatsApp(productName);
+                sendWhatsAppMessage(productName);
             } else {
-                pesanWhatsApp("informasi lebih lanjut"); 
+                sendWhatsAppMessage("informasi lebih lanjut");  
             }
         });
     });
 
-    // JavaScript untuk efek fade-in
+    // JavaScript for the fade-in effect
     const faders = document.querySelectorAll('.fade-in');
     const appearOptions = {
         threshold: 0.1,
