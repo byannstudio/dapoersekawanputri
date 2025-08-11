@@ -12,59 +12,67 @@
 </head>
 <body>
   <header>
-    <h1>Dapoer Sekawan Putri</h1>
-    <p>Bringing delicious and high-quality homemade flavors</p>
+    <div class="language-switcher">
+      <button onclick="setLanguage('en')">EN</button>
+      <button onclick="setLanguage('id')">ID</button>
+    </div>
+    <h1 data-en="Dapoer Sekawan Putri" data-id="Dapoer Sekawan Putri">Dapoer Sekawan Putri</h1>
+    <p data-en="Bringing delicious and high-quality homemade flavors" data-id="Menghadirkan cita rasa rumahan yang lezat dan berkualitas">Bringing delicious and high-quality homemade flavors</p>
   </header>
 
   <nav>
-    <a href="#about">About</a>
-    <a href="#products">Products</a>
-    <a href="#contact">Contact</a>
+    <a href="#about" data-en="About" data-id="Tentang">About</a>
+    <a href="#products" data-en="Products" data-id="Produk">Products</a>
+    <a href="#contact" data-en="Contact" data-id="Kontak">Contact</a>
   </nav>
 
   <section id="about" class="tentang fade-in">
-    <h2>About Us</h2>
-    <p class="justified-text"><strong>Dapoer Sekawan Putri</strong> is a homemade culinary business from <strong>Kartasura, Sukoharjo</strong>. We produce:</p>
-  <ul>
-    <li><strong>Banana Chips</strong> (variants: Chocolate, Vanilla Milk, Sweet, Ginger, Cinnamon, Salty)</li>
-    <li><strong>Frozen Beef Rendang</strong></li>
-    <li><strong>Frozen Steamed Chicken (Ayam Tim)</strong></li>
-  </ul>
-  <p>We are committed to delivering delicious food with a distinctive Indonesian flavor.</p>
-</section>
+    <h2 data-en="About Us" data-id="Tentang Kami">About Us</h2>
+    <p class="justified-text">
+      <strong data-en="Dapoer Sekawan Putri" data-id="Dapoer Sekawan Putri">Dapoer Sekawan Putri</strong>
+      <span data-en="is a homemade culinary business from" data-id="adalah usaha kuliner rumahan dari">is a homemade culinary business from</span>
+      <strong data-en="Kartasura, Sukoharjo" data-id="Kartasura, Sukoharjo">Kartasura, Sukoharjo</strong>.
+      <span data-en="We produce:" data-id="Kami memproduksi:">We produce:</span>
+    </p>
+    <ul>
+      <li><strong data-en="Caramel Banana Chips" data-id="Keripik Pisang Karamel">Caramel Banana Chips</strong> (<span data-en="variants" data-id="varian">variants</span>: <span data-en="Chocolate, Vanilla Milk, Sweet, Ginger, Cinnamon, Salty" data-id="Coklat, Susu Vanila, Manis, Jahe, Kayu Manis, Asin">Chocolate, Vanilla Milk, Sweet, Ginger, Cinnamon, Salty</span>)</li>
+      <li><strong data-en="Frozen Beef Rendang" data-id="Rendang Daging Frozen">Frozen Beef Rendang</strong></li>
+      <li><strong data-en="Frozen Steamed Chicken" data-id="Ayam Tim Frozen">Frozen Steamed Chicken</strong></li>
+    </ul>
+    <p data-en="We are committed to delivering delicious food with a distinctive Indonesian flavor." data-id="Kami berkomitmen menghadirkan makanan lezat dengan cita rasa khas Indonesia.">We are committed to delivering delicious food with a distinctive Indonesian flavor.</p>
   </section>
 
   <section id="products" class="product-section fade-in">
-    <h2>Products</h2>
+    <h2 data-en="Products" data-id="Produk">Products</h2>
 
     <div class="product-grid">
       <a href="#keripik-pisang-variations" class="product-card">
         <img src="images/krippisvanilla.jpg" alt="Keripik Pisang" />
-        <h3>Banana Chips</h3>
+        <h3 data-en="Banana Chips" data-id="Keripik Pisang">Banana Chips</h3>
       </a>
 
       <a href="#rendang-variations" class="product-card">
         <img src="images/rendang.jpg" alt="Rendang" />
-        <h3>Rendang</h3>
+        <h3 data-en="Rendang" data-id="Rendang">Rendang</h3>
       </a>
 
       <a href="#ayam-tim-variations" class="product-card">
         <img src="images/ayamtim.jpg" alt="Ayam Tim" />
-        <h3>Steamed Chicken (Ayam Tim)</h3>
+        <h3 data-en="Steamed Chicken" data-id="Ayam Tim">Steamed Chicken</h3>
       </a>
     </div>
   </section>
-  
+
   <section id="semua-produk" class="product-section fade-in">
-    <h2>Product Variations</h2>
+    <h2 data-en="Product Variations" data-id="Variasi Produk">Product Variations</h2>
 
     <div id="keripik-pisang-variations">
-      <h3>Banana Chips</h3>
+      <h3 data-en="Banana Chips" data-id="Keripik Pisang">Banana Chips</h3>
       <div class="product-grid">
         <div class="product-card">
           <img src="images/krippisvanilla.jpg" alt="Keripik Pisang Susu Vanilla" />
-          <h3>Vanilla Milk Banana Chips</h3>
-          <p>creamy, soft, fragrant!</p>
+          <h3 data-en="Vanilla Milk Banana Chips" data-id="Keripik Pisang Susu Vanilla">Vanilla Milk Banana Chips</h3>
+          <p data-en="creamy, soft, fragrant!" data-id="creamy, lembut, harum!">creamy, soft, fragrant!</p>
           <p class="price">Rp15.000 / 80g</p>
           <div class="button-group">
             <a href="#" class="whatsapp-button" data-product-name="Keripik Pisang Susu Vanilla">WhatsApp</a>
@@ -74,97 +82,21 @@
 
         <div class="product-card">
           <img src="images/krippiscoklat.jpg" alt="Keripik Pisang Coklat">
-          <h3>Chocolate Banana Chips</h3>
-          <p>melted, rich, tempting.</p>
+          <h3 data-en="Chocolate Banana Chips" data-id="Keripik Pisang Coklat">Chocolate Banana Chips</h3>
+          <p data-en="melted, rich, tempting." data-id="lumer, legit, menggoda.">melted, rich, tempting.</p>
           <p class="price">Rp15.000 / 80g</p>
           <div class="button-group">
             <a href="#" class="whatsapp-button" data-product-name="Keripik Pisang Coklat">WhatsApp</a>
             <a href="http://shopee.co.id/krippis_oleholehsolo" target="_blank" class="shopee-button">Shopee</a>
           </div>
         </div>
-
-        <div class="product-card">
-          <img src="images/krippisvanilla.jpg" alt="Keripik Pisang Manis">
-          <h3>Sweet Banana Chips</h3>
-          <p>sweet, light, classic.</p>
-          <p class="price">Rp15.000 / 80g</p>
-          <div class="button-group">
-            <a href="#" class="whatsapp-button" data-product-name="Keripik Pisang Manis">WhatsApp</a>
-            <a href="http://shopee.co.id/krippis_oleholehsolo" target="_blank" class="shopee-button">Shopee</a>
-          </div>
+        
         </div>
-
-        <div class="product-card">
-          <img src="images/krippisvanilla.jpg" alt="Keripik Pisang Kayu Manis">
-          <h3>Cinnamon Banana Chips</h3>
-          <p>warm, fragrant, with a distinctive cinnamon flavor.</p>
-          <p class="price">Rp15.000 / 80g</p>
-          <div class="button-group">
-            <a href="#" class="whatsapp-button" data-product-name="Keripik Pisang Kayu Manis">WhatsApp</a>
-            <a href="http://shopee.co.id/krippis_oleholehsolo" target="_blank" class="shopee-button">Shopee</a>
-          </div>
-        </div>
-
-        <div class="product-card">
-          <img src="images/krippisvanilla.jpg" alt="Keripik Pisang Jahe">
-          <h3>Ginger Banana Chips</h3>
-          <p>spicy, warm, unique.</p>
-          <p class="price">Rp15.000 / 80g</p>
-          <div class="button-group">
-            <a href="#" class="whatsapp-button" data-product-name="Keripik Pisang Jahe">WhatsApp</a>
-            <a href="http://shopee.co.id/krippis_oleholehsolo" target="_blank" class="shopee-button">Shopee</a>
-          </div>
-        </div>
-
-        <div class="product-card">
-          <img src="images/krippisvanilla.jpg" alt="Keripik Pisang Asin">
-          <h3>Salty Banana Chips</h3>
-          <p>savory, crunchy, addictive.</p>
-          <p class="price">Rp15.000 / 80g</p>
-          <div class="button-group">
-            <a href="#" class="whatsapp-button" data-product-name="Keripik Pisang Asin">WhatsApp</a>
-            <a href="http://shopee.co.id/krippis_oleholehsolo" target="_blank" class="shopee-button">Shopee</a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div id="rendang-variations" class="mt-4">
-      <h3>Rendang</h3>
-      <div class="product-grid">
-        <div class="product-card">
-          <img src="images/rendang.jpg" alt="Rendang Daging Sapi 250gr">
-          <h3>Beef Rendang 250gr</h3>
-          <p>Delicious ready-to-eat rendang.</p>
-          <p class="price">Rp70.000</p>
-          <a href="#" class="whatsapp-button" data-product-name="Rendang Daging Sapi 250gr">Order Now</a>
-        </div>
-        <div class="product-card">
-          <img src="images/rendang.jpg" alt="Rendang Daging Sapi 500gr">
-          <h3>Beef Rendang 500gr</h3>
-          <p>Delicious ready-to-eat rendang.</p>
-          <p class="price">Rp135.000</p>
-          <a href="#" class="whatsapp-button" data-product-name="Rendang Daging Sapi 500gr">Order Now</a>
-        </div>
-      </div>
-    </div>
-
-    <div id="ayam-tim-variations" class="mt-4">
-      <h3>Steamed Chicken (Ayam Tim)</h3>
-      <div class="product-grid">
-        <div class="product-card">
-          <img src="images/ayamtim.jpg" alt="Ayam Tim">
-          <h3>Steamed Chicken</h3>
-          <p>Healthy and delicious ready-to-eat steamed chicken!</p>
-          <p class="price">Rp100.000 / whole chicken</p>
-          <a href="#" class="whatsapp-button" data-product-name="Ayam Tim">Order Now</a>
-        </div>
-      </div>
     </div>
   </section>
 
   <section id="contact" class="kontak fade-in">
-    <h2>Contact Us</h2>
+    <h2 data-en="Contact Us" data-id="Kontak Kami">Contact Us</h2>
     <p><a href="https://maps.app.goo.gl/RzuGwB92bbmAhztQ7" target="_blank">SUKOHARJO, CENTRAL JAVA</a></p>
     <div class="social-buttons">
       <a href="https://wa.me/6285878299285" target="_blank">WhatsApp</a>
@@ -174,7 +106,7 @@
   </section>
 
   <footer>
-    <p>© 2025 Dapoer Sekawan Putri. All rights reserved.</p>
+    <p data-en="&copy; 2025 Dapoer Sekawan Putri. All rights reserved." data-id="&copy; 2025 Dapoer Sekawan Putri. Semua hak dilindungi.">&copy; 2025 Dapoer Sekawan Putri. All rights reserved.</p>
   </footer>
 
   <script src="script.js"></script>
